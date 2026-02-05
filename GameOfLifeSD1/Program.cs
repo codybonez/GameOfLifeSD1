@@ -17,7 +17,7 @@
                         board.DisplayBoard();
                         break;
                     case "2":
-                        board.ClearBoard();
+                        board.ClearBoard(); 
                         break;
                 }
             } while (choice != "1" || choice != "2");
