@@ -9,13 +9,14 @@ namespace GameOfLifeSD1
     public class Board
     {
         // Create 2d array of bools
-   
-        
+
+        bool[,] board = new bool[100, 100];
+
         public void DisplayBoard()
 
 
         {
-            bool[,] board = new bool[100, 100];
+      
             int i = 0;
             int j = 0;
           
@@ -33,7 +34,7 @@ namespace GameOfLifeSD1
         }
        public void ClearBoard()
         {
-            bool[,] board = new bool[100, 100];
+           
             int i = 0;
             int j = 0;
             for (i = 0; i < 100; i++)
