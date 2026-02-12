@@ -10,25 +10,28 @@ namespace GameOfLifeSD1
     {
         // Create 2d array of bools
 
-        public Board()
+        public Board(int _row, int _col)
         {
-         board = new bool[i,j];
+     
+         board = new bool[_row, _col];
+           row = _row;
+            col = _col;
         }
 
-        public int i = 100;
-        public int j = 100;
+        public int row;
+        public int col;
         bool[,] board;
  
         public void DisplayBoard()
         {
-            board = new bool[i, j];
           
-            for (i = 0; i < 100; i++)
+          
+            for (int i = 0; i < row; i++)
             {
       
-                for (j = 0; j < 100; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    Console.Write($"[{board[j, i]}]");
+                    Console.Write($"[{board[i, j]}]");
             
                 }
             }
@@ -37,15 +40,14 @@ namespace GameOfLifeSD1
         }
        public void ClearBoard()
         {
-           
 
-            for (i = 0; i < 100; i++)
+
+            for (int i = 0; i < row; i++)
             {
-           
-                for (j = 0; j < 100; j++)
+
+                for (int j = 0; j < col; j++)
                 {
-                    Console.Write($"[]"); 
-               
+                    Console.Write($"[]");
 
                 }
             }

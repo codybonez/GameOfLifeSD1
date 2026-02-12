@@ -6,7 +6,7 @@
         {
 
             string choice;
-            Board board = new Board();
+            Board board = new Board(10,10);
             do
             {
                 Console.WriteLine("\n\n1. Display 2. Clear 3. Exit");
