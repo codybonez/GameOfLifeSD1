@@ -21,7 +21,7 @@ namespace GameOfLifeSD1
         public int row;
         public int col;
         bool[,] board;
-        int selector;
+        int neighbors;
         public void DisplayBoard()
         {
           
@@ -53,27 +53,36 @@ namespace GameOfLifeSD1
             }
 
         }
-        public void CountNeighbors()
+        public int CountNeighbors()
         {
-            selector = 0;
-            // Take a selector
-            // Look through top-left, top-right, top, middle-left, middle-right, bottom-left, bottom-right, bottom
-            // take each and count
-            // Edge case: if no pos exists, then do not count
-     
-
-            // some logic to access the board
 
 
 
-            // if (top-left doesn't exist){
-            // do not count 
-            //}
 
-            // repeat the same process for all sides
 
+            for (int i = row - 1; i <= row + 1; i++)
+            {
+                for (int j = col - 1; j <= col + 1; j++)
+                {
+
+                    if (i == row && j == col)
+                    {
+                        continue;
+                    }
+                    if (i >= 0 && i < row && j >= 0 && j < col)
+                    {
+                        neighbors++;
+                    }
+
+
+
+
+                }
+            }
+            return neighbors;
 
         }
+
 
     }
 }
