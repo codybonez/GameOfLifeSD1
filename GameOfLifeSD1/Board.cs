@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace GameOfLifeSD1
          board = new bool[_row, _col];
            row = _row;
             col = _col;
+            board[1,0] = true;
+             board[1,1] = true;
+              board[0,1] = true;
+            board[1, 3] = true;
+               
         }
 
         public int row;
@@ -53,32 +59,65 @@ namespace GameOfLifeSD1
             }
 
         }
-        public int CountNeighbors()
+        public int CountNeighbors(int PosX, int PosY)
         {
 
+          
 
-
-
-
-            for (int i = row - 1; i <= row + 1; i++)
-            {
-                for (int j = col - 1; j <= col + 1; j++)
+            if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY] == true)
                 {
-
-                    if (i == row && j == col)
-                    {
-                        continue;
-                    }
-                    if (i >= 0 && i < row && j >= 0 && j < col)
-                    {
-                        neighbors++;
-                    }
-
-
-
-
+                    neighbors++;
                 }
-            }
+            
+
+          
+                if (PosX-1 >= 0 && PosY-1 >= 0 && board[PosX -1 , PosY] == true)
+                {
+                    neighbors++;
+                }
+            
+            
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX, PosY + 1] == true)
+                {
+                    neighbors++;
+                }
+
+          
+
+            if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX, PosY - 1] == true)
+                 {       
+                neighbors++;
+                 }
+            
+         
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY + 1] == true)
+                {
+                    neighbors++;
+                }
+            
+            
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX - 1, PosY - 1] == true)
+                {
+                    neighbors++;
+                }
+            
+          
+            
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY - 1] == true)
+                {
+                    neighbors++;
+                }
+            
+          
+            
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX - 1, PosY + 1] == true)
+                {
+                    neighbors++;
+                }
+            
+
+
+           
             return neighbors;
 
         }
@@ -86,3 +125,6 @@ namespace GameOfLifeSD1
 
     }
 }
+
+
+
