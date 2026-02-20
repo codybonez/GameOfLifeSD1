@@ -64,53 +64,53 @@ namespace GameOfLifeSD1
 
           
 
-            if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY] == true)
+            if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX + 1, PosY] == true)
                 {
                     neighbors++;
                 }
             
 
           
-                if (PosX-1 >= 0 && PosY-1 >= 0 && board[PosX -1 , PosY] == true)
+                if (PosX-1 >= 0 && PosY-1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX -1 , PosY] == true)
                 {
                     neighbors++;
                 }
             
             
-                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX, PosY + 1] == true)
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX, PosY + 1] == true)
                 {
                     neighbors++;
                 }
 
           
 
-            if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX, PosY - 1] == true)
+            if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX, PosY - 1] == true)
                  {       
                 neighbors++;
                  }
             
          
-                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY + 1] == true)
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX + 1, PosY + 1] == true)
                 {
                     neighbors++;
                 }
             
             
-                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX - 1, PosY - 1] == true)
-                {
-                    neighbors++;
-                }
-            
-          
-            
-                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX + 1, PosY - 1] == true)
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX - 1, PosY - 1] == true)
                 {
                     neighbors++;
                 }
             
           
             
-                if (PosX - 1 >= 0 && PosY - 1 >= 0 && board[PosX - 1, PosY + 1] == true)
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX + 1, PosY - 1] == true)
+                {
+                    neighbors++;
+                }
+            
+          
+            
+                if (PosX - 1 >= 0 && PosY - 1 >= 0 && PosX + 1 <= row && PosY + 1 <= col && board[PosX - 1, PosY + 1] == true)
                 {
                     neighbors++;
                 }
