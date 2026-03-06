@@ -5,31 +5,30 @@
         static void Main(string[] args)
         {
 
-            string choice;
+            
             Board board = new Board(10,10);
-            do
+
+            // Create the generations for the game
+            int generations = 10;
+
+
+            for (int i = 0; i < generations; i++)
             {
-                Console.WriteLine("\n\n1. Display 2. Clear 3. Count neighbors 4. Exit");
-                choice = Console.ReadLine();
-                switch (choice)
-                {
-                    case "1":
-                        board.DisplayBoard();
-                        break;
-                    case "2":
-                        board.ClearBoard();
-                        break;
-                    case "3":
-                        Console.WriteLine($"There are {board.CountNeighbors(1, 1)} neighbors");
-                        break;
-                    case "4":
-                        Console.WriteLine("Exiting program");
-                        break;
+                board.DisplayBoard();          
+                board.Rules();
+                Console.WriteLine($"Current generation {i+1}");
+                Thread.Sleep(1000);
 
-                }
-            } while (choice != "3");
+            }
 
 
+            // Apply rules to game
+
+
+
+            // display
+
+           
 
 
         }

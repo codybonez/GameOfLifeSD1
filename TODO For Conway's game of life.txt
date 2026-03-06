@@ -1,0 +1,5 @@
+TODO For Conway's game of life:
+
+
+Create another board in which it copies every action from the previous board and assigns the current board with the next board.
+Create Rules for game of life.
