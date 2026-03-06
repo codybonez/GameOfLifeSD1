@@ -143,28 +143,34 @@ namespace GameOfLifeSD1
                         //nextgen[i,j] = aliveneighbors == 2 || aliveneighbors == 3;
                         if (aliveneighbors < 2)
                         {
-                            board[i, j] = false;
+                            nextgen[i, j] = false;
 
                         }
                         if (aliveneighbors > 3)
                         {
-                            board[i, j] = false;
+                            nextgen[i, j] = false;
                         }
-
+                     
                     }
                     else
                     {
                         //nextgen[i, j] = aliveneighbors == 3;
-                        if (aliveneighbors == 3 || aliveneighbors == 2)
+                        if (aliveneighbors == 3)
                         {
-                            board[i, j] = true;
+                            nextgen[i, j] = true;
                         }
+                        if (aliveneighbors == 2)
+                        {
+                            nextgen[i, j] = true;
+
+                        }
+                   
 
                     }
                  
                 }
             }
-            nextgen = board;
+            board = nextgen;
         }
         private void GenerateField()
         {

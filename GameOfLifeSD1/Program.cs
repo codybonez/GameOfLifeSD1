@@ -6,10 +6,10 @@
         {
 
             
-            Board board = new Board(10,10);
+            Board board = new Board(25,25);
 
             // Create the generations for the game
-            int generations = 10;
+            int generations = 50;
 
 
             for (int i = 0; i < generations; i++)
