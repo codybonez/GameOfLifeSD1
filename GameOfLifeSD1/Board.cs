@@ -146,7 +146,7 @@ namespace GameOfLifeSD1
                     else
                     {
                         
-                        if (aliveneighbors == 3 || aliveneighbors == 2)
+                        if (aliveneighbors == 3)
                         {
                             nextgen[i, j] = true;
                         }
